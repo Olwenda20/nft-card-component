@@ -1,0 +1,172 @@
+/*===++=+ FONT FAMILY =====*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* - - - - - VARIABLES - - - - - */
+
+:root{
+  /*===== font color =====*/
+  --main-bg:hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line:hsl(215, 32%, 27%);
+  
+  --paragraph-color:hsl(215, 51%, 70%);
+  --neutral:hsl(0, 0%, 100%);
+  --symbol-color:hsl(178, 100%, 50%);
+  
+  /*===== font-size =====*/
+  --body-font:18px;
+  --h1-font:1.5rem;
+  --span-font:0.85rem;
+  
+  /*===== Font Family=====*/
+  --family:'Outfit', sans-serif;
+  
+  /* ===== FONT WEIGHT =====*/
+  --bolder:600;
+  --bold:400;
+  --light:300;
+  
+} 
+
+/* ====== BASE/GLOBAL ========*/
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline:none;
+}
+
+body{
+  height: 100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:var(--main-bg);
+}
+
+img{
+  width: 100%;
+  height:auto;
+  object-fit: cover;
+  border-radius:0.5rem;
+}
+
+/* ===== CONTAINER =====*/
+.container{
+  background: var(--card-bg);
+  width: 25rem;
+  display: flex;
+  flex-direction:column;
+  border-radius:0.5rem;
+  padding:1.5rem;
+}
+
+/* - - - - Content - - - - */
+.content{
+  margin:0;
+}
+
+.paragraph{
+  border-bottom: 1px solid var(--line);
+}
+
+.paragraph h1{
+  font-size: var(--h1-font);
+  font-weight:var(--bolder);
+  font-family: var(--family);
+  color: var(--neutral);
+  margin: 1rem 0;
+}
+
+.paragraph h1:hover{
+  color: var(--symbol-color);
+}
+
+p{
+  font-size: var(--body-font);
+  font-weight: var(--light);
+  font-family: var(--family);
+  color: var(--paragraph-color);
+  line-height: 1.5rem;
+}
+
+/*===== symbols ======*/
+.symbols{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+}
+/*----- images icon-----*/
+.icon img{
+  width: 1.2rem;
+  margin: 1rem 0;
+  margin-right: 0.5rem;
+}
+
+.footer img{
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+.clock img{
+  width: 2rem;
+}
+
+.ether h2{
+  color: var(--symbol-color);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: var(--family);
+  font-weight: var(--bold);
+}
+
+.icon span{
+  color: var(--neutral)
+}
+
+.icon span:hover{
+  color: var(--symbol-color);
+}
+
+
+/* ====== RESPONSIVENESS =======*/
+@media (max-width:375px){
+ /*===== CONTAINER =====*/
+ .container{
+   width:100%;
+   margin:1.5rem;
+   padding:1rem;
+ }
+ 
+ p{
+   font-size:15px;
+ }
+ 
+.icon img{
+  width:0.65rem;
+  margin-right:0.5rem;
+}
+
+.footer img{
+  width: 2rem;
+  margin-right: 1.5rem;
+}
+
+.clock img{
+  width: 1.2rem;
+}
+
+.ether h2{
+  font-size: 0.85rem;
+}
+
+}
